@@ -3,7 +3,7 @@
       <nav>
           <div class="navLogo"></div>
           <div class="navSearch">
-              <SearchBar/>
+              <SearchBar @searching="dataShared.searchFilter"/>
           </div>
       </nav>
   </header>
@@ -11,12 +11,19 @@
 
 <script>
 import SearchBar from '../CommonElements/SearchBar.vue'
+import dataShared from '../../shared/dataShared.js'
 
 export default {
     name: 'BaseHead',
     components: { 
         SearchBar, 
+        
     },   
+    data() {
+        return {
+            dataShared,
+        }
+    }
 }
 </script>
 
