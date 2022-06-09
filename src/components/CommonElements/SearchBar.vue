@@ -1,6 +1,6 @@
 <template>
   <div>
-    <form>
+    <form @submit.prevent="searchFilm">
       <input type="text" v-model="dataShared.searchFilter">
       <button type="submit">Cerca</button>
     </form>
