@@ -1,6 +1,6 @@
 <template>
     <main>
-        <CardVideo v-for="film in filterItems" :key="film.id" :film="film"/>
+        <CardVideo v-for="film in dataShared.films" :key="film.id" :film="film"/>
     </main>
 </template>
 
@@ -20,13 +20,6 @@ export default {
     components: {
         CardVideo,
     },
-
-    computed: {
-        filterItems() {
-            return this.dataShared.films.filter((elm) => {elm.title.toLowerCase().includes(this.dataShared.searchFilter.toLowerCase())});
-        }
-    }
-
 }
 </script>
 

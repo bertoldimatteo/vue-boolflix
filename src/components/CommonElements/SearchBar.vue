@@ -23,15 +23,16 @@ export default {
         axios.get('https://api.themoviedb.org/3/search/movie', {
         params: {
           api_key: '6f038455067a9f8d913bf429318fd950',
-          query: 'via',
+          query: dataShared.searchFilter.toString(),
           language: 'it-IT'
         }
           }).then((response) => {
               this.dataShared.films = response.data.results;
+              console.log(dataShared);
           }).catch((error) => {
               console.log(error);
         })
-      }
+      },
     },
 }
 </script>
