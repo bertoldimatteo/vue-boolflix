@@ -10,5 +10,6 @@ export default Vue.observable ({
         'fr',
         'de',
         'ja',
+        'es',
     ],
 })

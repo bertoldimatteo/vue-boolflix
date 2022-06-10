@@ -1,10 +1,11 @@
 <template>
   <li class="card_video">
+    <img class="posterFilm" :src="`https://image.tmdb.org/t/p/w500/${film.poster_path}`" alt="">
     <h3>{{film.title}}</h3>
     <h3>{{film.name}}</h3>
     <h4>{{film.original_title}}</h4>
     <h4>{{film.original_name}}</h4>
-    <img :src="existFlag(film.original_language) ? require(`../../assets/images/${film.original_language}.png`): null">
+    <p><img class="flag" :src="existFlag(film.original_language) ? require(`../../assets/images/${film.original_language}.png`): null" alt=""></p>
     <p>{{film.vote_average}}</p>
   </li>
 </template>
@@ -33,10 +34,13 @@ export default {
 <style lang="scss" scoped>
 .card_video {
   width: 200px;
-  height: 250px;
-
-  & img {
-    width: 100%;
-  }
+  height: 450px;
+}
+.flag {
+  width: 50px;
+}
+.posterFilm {
+  width: 100%;
+  height: 300px;
 }
 </style>
