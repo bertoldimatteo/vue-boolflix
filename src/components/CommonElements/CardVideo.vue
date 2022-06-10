@@ -1,10 +1,10 @@
 <template>
-  <div class="card_video">
-    <p>{{film.title}}</p>
-    <p>{{film.original_title}}</p>
+  <li class="card_video">
+    <h3>{{film.title}}</h3>
+    <h4>{{film.original_title}}</h4>
     <p>{{film.original_language}}</p>
     <p>{{film.vote_average}}</p>
-  </div>
+  </li>
 </template>
 
 <script>
@@ -17,5 +17,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-
+.card_video {
+  width: 200px;
+  height: 250px;
+}
 </style>

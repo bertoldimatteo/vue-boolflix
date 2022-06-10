@@ -1,6 +1,8 @@
 <template>
-    <main>
-        <CardVideo v-for="film in dataShared.films" :key="film.id" :film="film"/>
+    <main class="container">
+        <ul class="list">
+            <CardVideo v-for="film in dataShared.films" :key="film.id" :film="film"/>
+        </ul>
     </main>
 </template>
 
@@ -24,5 +26,17 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.container {
+    max-width: 1280px;
+    margin: auto;
+}
+.list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 
+    & li {
+        list-style-type: none;
+    }
+}
 </style>
