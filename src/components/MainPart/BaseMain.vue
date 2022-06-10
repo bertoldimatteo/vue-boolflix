@@ -6,7 +6,7 @@
         </ul>
         <h2>Serie TV</h2>
         <ul class="list">
-            <CardVideo v-for="serie in dataShared.tvSeries" :key="serie.id" :serie="serie"/>
+            <CardVideo v-for="serie in dataShared.tvSeries" :key="serie.id" :film="serie"/>
         </ul>
     </main>
 </template>

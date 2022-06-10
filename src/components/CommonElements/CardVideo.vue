@@ -1,7 +1,9 @@
 <template>
   <li class="card_video">
     <h3>{{film.title}}</h3>
+    <h3>{{film.name}}</h3>
     <h4>{{film.original_title}}</h4>
+    <h4>{{film.original_name}}</h4>
     <p>{{film.original_language}}</p>
     <p>{{film.vote_average}}</p>
   </li>
@@ -12,7 +14,6 @@ export default {
     name: 'CardVideo',
     props: {
         film: Object,
-        serie: Object
     },
 }
 </script>
