@@ -6,7 +6,7 @@
     <h4>{{film.original_title}}</h4>
     <h4>{{film.original_name}}</h4>
     <p><img class="flag" :src="existFlag(film.original_language) ? require(`../../assets/images/${film.original_language}.png`): null" alt=""></p>
-    <p>{{film.vote_average}}</p>
+    <p>{{filmScore(film.vote_average)}}</p>
   </li>
 </template>
 
@@ -26,6 +26,9 @@ export default {
     methods: {
       existFlag(lang) {
         return this.dataShared.flagAvailable.includes(lang);
+      },
+      filmScore(score) {
+        return Math.ceil(score / 2);
       }
     }
 }
