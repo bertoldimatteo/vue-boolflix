@@ -4,7 +4,7 @@
     <h3>{{film.name}}</h3>
     <h4>{{film.original_title}}</h4>
     <h4>{{film.original_name}}</h4>
-    <p><img :src="existFlag(film.original_language) ? `../assets/images/${film.original_language}.png` : null"></p>
+    <img :src="existFlag(film.original_language) ? require(`../../assets/images/${film.original_language}.png`): null">
     <p>{{film.vote_average}}</p>
   </li>
 </template>
@@ -34,5 +34,9 @@ export default {
 .card_video {
   width: 200px;
   height: 250px;
+
+  & img {
+    width: 100%;
+  }
 }
 </style>

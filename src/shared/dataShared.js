@@ -9,6 +9,6 @@ export default Vue.observable ({
         'it',
         'fr',
         'de',
-        'jp',
+        'ja',
     ],
 })
