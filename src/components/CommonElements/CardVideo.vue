@@ -12,7 +12,8 @@ export default {
     name: 'CardVideo',
     props: {
         film: Object,
-    }
+        serie: Object
+    },
 }
 </script>
 

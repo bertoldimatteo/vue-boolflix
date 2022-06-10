@@ -31,6 +31,17 @@ export default {
           }).catch((error) => {
               console.log(error);
         })
+        axios.get('https://api.themoviedb.org/3/search/tv', {
+        params: {
+          api_key: '6f038455067a9f8d913bf429318fd950',
+          query: this.dataShared.searchFilter,
+          language: 'it-IT'
+        }
+          }).then((payload) => {
+              this.dataShared.tvSeries = payload.data.results;
+          }).catch((error) => {
+              console.log(error);
+        })
       },
     },
 }
