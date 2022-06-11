@@ -6,7 +6,9 @@
     <h4>{{film.original_title}}</h4>
     <h4>{{film.original_name}}</h4>
     <p><img class="flag" :src="existFlag(film.original_language) ? require(`../../assets/images/${film.original_language}.png`): null" alt=""></p>
-    <p>{{filmScore(film.vote_average)}}</p>
+    <div class="star-rating">
+      <span v-for="n in 5" :key="n" class="fa fa-star" :class="{'checked' : filmScore(film.vote_average) >= n }"></span>
+    </div>
   </li>
 </template>
 
@@ -29,7 +31,7 @@ export default {
       },
       filmScore(score) {
         return Math.ceil(score / 2);
-      }
+      },
     }
 }
 </script>
@@ -45,5 +47,11 @@ export default {
 .posterFilm {
   width: 100%;
   height: 300px;
+}
+.star-rating {
+  display: flex;
+}
+.checked {
+  color: orange;
 }
 </style>
