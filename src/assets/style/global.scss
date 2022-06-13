@@ -1,3 +1,7 @@
 @import '_variables.scss';
 @import '_tipography.scss';
 @import '_reset.scss';
+
+body {
+    background-color: var(--first-color);
+}

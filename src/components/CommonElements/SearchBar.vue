@@ -1,8 +1,9 @@
 <template>
-  <div>
+  <div class="input-search">
       <input @keyup.enter="searchFilm" type="text" v-model="dataShared.searchFilter">
       <!-- <button type="submit">Cerca</button> -->
-      <i class="icon fa-solid fa-bell icon"></i>
+      <i class="icon fa-solid fa-bell icon fa-lg"></i>
+      <i class="icon fa-solid fa-user fa-lg"></i>
   </div>
 </template>
 
@@ -47,4 +48,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.input-search > * {
+  margin: 0 10px;
+}
 </style>
