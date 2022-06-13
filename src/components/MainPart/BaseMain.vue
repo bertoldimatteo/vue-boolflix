@@ -86,6 +86,8 @@ main {
 .default-container {
     overflow-x: auto;
     padding: 50px;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
 }
 .default-container h3 {
     margin-bottom: 50px;
