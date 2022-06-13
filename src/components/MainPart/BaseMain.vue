@@ -12,7 +12,10 @@
         </div>
         <div v-else>
             <div class="hero-container">
-
+                <div class="box-buttons">
+                    <button type="button">Riproduci</button>
+                    <button type="button">Altre info</button>
+                </div>
             </div>
             <div class="default-container">
                 <div class="list-all">
@@ -58,6 +61,9 @@ export default {
     height: 850px;
     background-repeat: no-repeat;
     background-size: cover;
+    display: flex;
+    align-items: flex-end;
+    padding: 100px;
 }
 .default-container {
     max-width: 1800px;
