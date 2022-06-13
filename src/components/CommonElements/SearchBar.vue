@@ -1,6 +1,6 @@
 <template>
   <div class="input-search">
-      <input @keyup.enter="mixin.searchFilm" type="text" v-model="dataShared.searchFilter">
+      <input @keyup.enter="searchFilm" type="text" v-model="dataShared.searchFilter">
       <!-- <button type="submit">Cerca</button> -->
       <i class="icon fa-solid fa-bell icon fa-lg"></i>
       <i class="icon fa-solid fa-user fa-lg"></i>
@@ -9,7 +9,7 @@
 
 <script>
 import dataShared from '../../shared/dataShared.js'
-
+import { searchFilm } from '../../shared/dataShared.js'
 
 export default {
     name: 'SearchBar',
@@ -19,7 +19,7 @@ export default {
         }
     },
     methods: {
-     
+      searchFilm
     },
 }
 </script>

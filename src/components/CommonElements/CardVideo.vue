@@ -18,7 +18,7 @@ import dataShared from '../../shared/dataShared.js';
 export default {
     name: 'CardVideo',
     props: {
-        info: Object,
+        film: Object,
     },
     data() {
         return {
