@@ -9,7 +9,6 @@
 import BaseHead from './components/MainPart/BaseHead.vue'
 import BaseMain from './components/MainPart/BaseMain.vue'
 
-
 export default {
   name: 'App',
   components: {

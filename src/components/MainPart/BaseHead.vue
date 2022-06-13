@@ -39,7 +39,10 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-    background-color:var(--first-color);
+    background-color:transparent;
+    position: fixed;
+    top: 0;
+    width: 100%;
 }
 .navbar, .left-navbar, .icon-navbar, .right-navbar {
     display: flex;
