@@ -1,16 +1,16 @@
 <template>
     <main>
-        <div v-if="dataShared.searchFilm === true " class="search-container">
+        <div class="search-container">
             <h2>Film</h2>
             <ul class="list">
-                <CardVideo v-for="film in dataShared.films" :key="film.id" :film="film"/>
+                <CardVideo v-for="film in dataShared.films" :key="film.id" :info="film"/>
             </ul>
             <h2>Serie TV</h2>
             <ul class="list">
-                <CardVideo v-for="serie in dataShared.tvSeries" :key="serie.id" :film="serie"/>
+                <CardVideo v-for="serie in dataShared.tvSeries" :key="serie.id" :info="serie"/>
             </ul>
         </div>
-        <div v-else>
+        <!-- <div v-else>
             <div class="hero-container">
                 <div class="box-buttons">
                     <button type="button">Riproduci</button>
@@ -19,10 +19,13 @@
             </div>
             <div class="default-container">
                 <div class="list-all">
-                
+                    <h3>I più popolari su Netflix</h3>
+                    <ul>
+                        <CardVideo v-for="film in dataShared.popular" :key="film.id" :film="film"/>
+                    </ul>
                 </div>
             </div>
-        </div>
+        </div> -->
     </main>
 </template>
 
