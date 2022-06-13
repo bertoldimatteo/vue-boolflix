@@ -18,9 +18,9 @@
                 </div>
             </div>
             <div class="default-container">
+                <h3>I più popolari su Netflix</h3>
                 <div class="list-all">
-                    <h3>I più popolari su Netflix</h3>
-                    <ul>
+                    <ul class="popular">
                         <CardVideo v-for="film in dataShared.popular" :key="film.id" :film="film"/>
                     </ul>
                 </div>
@@ -32,6 +32,7 @@
 <script>
 import CardVideo from '../CommonElements/CardVideo.vue';
 import dataShared from '../../shared/dataShared.js';
+import axios from 'axios';
 
 import Vue from 'vue'
 import Embed from 'v-video-embed'
@@ -47,14 +48,27 @@ export default {
             dataShared,
         }
     },
-
     components: {
         CardVideo,
     },
+    created() {
+    axios.get('https://api.themoviedb.org/3/trending/movie/week', {
+    params: {
+        api_key: '6f038455067a9f8d913bf429318fd950',
+  }
+    }).then((response) => {
+        this.dataShared.popular = response.data.results;
+    }).catch((error) => {
+        console.log(error);
+  })
+    }
 }
 </script>
 
 <style lang="scss" scoped>
+main {
+    margin-bottom: 50px;
+}
 .search-container {
     max-width: 1750px;
     margin: auto;
@@ -70,8 +84,12 @@ export default {
     padding: 100px;
 }
 .default-container {
-    max-width: 1800px;
-    margin: auto;
+    overflow-x: auto;
+    padding: 50px;
+}
+.default-container h3 {
+    margin-bottom: 50px;
+    margin-left: 10px;
 }
 .list {
     display: flex;
@@ -81,6 +99,12 @@ export default {
         list-style-type: none;
         margin: 40px 5px;
     }
+}
+.list-all, .popular {
+    display: flex;
+}   
+.popular > * {
+    margin: 0 10px;
 }
 h2 {
     margin: 20px 0;
