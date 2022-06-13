@@ -10,6 +10,7 @@
       <div class="star-rating">
         <span v-for="n in 5" :key="n" class="fa fa-star" :class="{'checked' : filmScore(film.vote_average) >= n }"></span>
       </div>
+      <p>{{film.overview}}</p>
     </div>
   </li>
 </template>
@@ -62,16 +63,18 @@ export default {
   display: none;
   padding: 10px;
   position: absolute;
-  top: 0;
+  top: 125px;
   left: 0;
+  background-color: #000;
+}
+.film-info > * {
+  margin: 2px 0;
 }
 .card_video:hover {
   transform: scale(1.5);
   transition: 1s;
   z-index: 2;
-}
-.card_video:hover .posterFilm {
-  filter: blur(2px);
+  overflow-y: auto ;
 }
 .card_video:hover .film-info {
   display: block;
