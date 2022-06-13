@@ -56,7 +56,7 @@ export default {
 
 <style lang="scss" scoped>
 .search-container {
-    max-width: 1280px;
+    max-width: 1750px;
     margin: auto;
     margin-top: 80px;
 }
@@ -76,10 +76,10 @@ export default {
 .list {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
 
     & li {
         list-style-type: none;
+        margin: 40px 5px;
     }
 }
 h2 {

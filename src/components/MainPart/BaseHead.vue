@@ -4,7 +4,7 @@
           <div class="left-navbar">
             <img src="../../assets/images/Logonetflix.png" alt="netflix logo">
             <ul class="icon-navbar">
-                <li><a href="#">Home</a></li>
+                <li><a href="http://192.168.15.109:8080">Home</a></li>
                 <li><a href="#">Serie TV</a></li>
                 <li><a href="#">Film</a></li>
                 <li><a href="#">Nuovi e popolari</a></li>
