@@ -1,9 +1,19 @@
 <template>
   <header class="container">
-      <nav>
-          <div class="navLogo"></div>
-          <div class="navSearch">
-              <SearchBar @searching="dataShared.searchFilter"/>
+      <nav class="navbar">
+          <div class="left-navbar">
+            <img src="../../assets/images/Logonetflix.png" alt="netflix logo">
+            <ul class="icon-navbar">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Serie TV</a></li>
+                <li><a href="#">Film</a></li>
+                <li><a href="#">Nuovi e popolari</a></li>
+                <li><a href="#">La mia lista</a></li>
+            </ul>
+          </div>
+          <div class="right-navbar">
+                <i class="search-icon fa-solid fa-magnifying-glass fa-lg"></i>
+                <SearchBar class="search-bar" @searching="dataShared.searchFilter"/>
           </div>
       </nav>
   </header>
@@ -29,12 +39,34 @@ export default {
 
 <style lang="scss" scoped>
 .container {
-    height: 60px;
     background-color:var(--first-color);
 }
-nav {
+.navbar, .left-navbar, .icon-navbar, .right-navbar {
     display: flex;
     align-items: center;
+} 
+.navbar {
     justify-content: space-between;
+    padding: 15px;
+}
+.left-navbar {
+    & ul {
+        list-style-type: none;
+        margin: 0 40px;
+    }
+    & ul li {
+        margin: 0 10px;
+    }
+    & a {
+        text-decoration: none;
+        font-size: .875rem;
+    }
+}
+.search-icon, a {
+    color:#fff
+}
+img {
+    max-width: 120px;
+    width: 100px;
 }
 </style>
