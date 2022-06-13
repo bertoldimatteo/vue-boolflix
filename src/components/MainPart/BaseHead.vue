@@ -12,7 +12,7 @@
             </ul>
           </div>
           <div class="right-navbar">
-                <i class="search-icon fa-solid fa-magnifying-glass fa-lg"></i>
+                <i class="icon fa-solid fa-magnifying-glass fa-lg"></i>
                 <SearchBar class="search-bar" @searching="dataShared.searchFilter"/>
           </div>
       </nav>
@@ -60,11 +60,10 @@ export default {
     & a {
         text-decoration: none;
         font-size: .875rem;
+        color:#fff
     }
 }
-.search-icon, a {
-    color:#fff
-}
+
 img {
     max-width: 120px;
     width: 100px;
