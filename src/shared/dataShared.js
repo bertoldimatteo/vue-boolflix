@@ -26,6 +26,7 @@ export const searchFilm = function(){
   }
     }).then((response) => {
         this.dataShared.films = response.data.results;
+        this.dataShared.searchQuery = true;
     }).catch((error) => {
         console.log(error);
   })

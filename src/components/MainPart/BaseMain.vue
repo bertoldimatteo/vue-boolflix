@@ -1,6 +1,6 @@
 <template>
     <main>
-        <div v-if="" class="search-container">
+        <div v-if="dataShared.searchQuery === true" class="search-container">
             <h2>Film</h2>
             <ul class="list">
                 <CardVideo v-for="film in dataShared.films" :key="film.id" :film="film"/>
@@ -58,6 +58,7 @@ export default {
 .search-container {
     max-width: 1280px;
     margin: auto;
+    margin-top: 80px;
 }
 .hero-container{
     background-image: url('https://images.everyeye.it/img-notizie/stranger-things-4-misterioso-countdown-trailer-arrivo-domani-v3-581079-1280x720.webp');
