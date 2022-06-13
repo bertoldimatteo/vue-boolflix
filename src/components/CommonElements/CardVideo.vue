@@ -42,7 +42,6 @@ export default {
 .card_video {
   width: 280px;
   height: 180px;
-  opacity: 1;
   position: relative;
 }
 .flag {
@@ -60,7 +59,7 @@ export default {
   color: orange;
 }
 .film-info {
-  // display: none;
+  display: none;
   padding: 10px;
   position: absolute;
   top: 0;
@@ -69,9 +68,12 @@ export default {
 .card_video:hover {
   transform: scale(1.5);
   transition: 1s;
-  opacity: 0.5;
+  z-index: 2;
 }
-// .card_video:hover .film-info {
-//   display: block;
-// }
+.card_video:hover .posterFilm {
+  filter: blur(2px);
+}
+.card_video:hover .film-info {
+  display: block;
+}
 </style>
