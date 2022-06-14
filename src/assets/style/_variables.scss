@@ -6,4 +6,16 @@
     .icon, p, h1, h2, h3, h4, span {
         color: #fff;
     }
+
+    /* ICON */
+    .btn {
+        padding: 15px 30px;
+        font-size: 1.375rem;
+        font-weight: bold;
+        border-radius: 5px;
+        border: none;
+    }
+    .btn:hover {
+        opacity: 0.6;
+    }
 }

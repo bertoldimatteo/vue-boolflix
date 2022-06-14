@@ -13,8 +13,8 @@
         <div v-else>
             <div class="hero-container">
                 <div class="box-buttons">
-                    <button type="button">Riproduci</button>
-                    <button type="button">Altre info</button>
+                    <button class="btn play" type="button"><i class="fa-solid fa-play"></i>Riproduci</button>
+                    <button class="btn info" type="button"><i class="fa-solid fa-info"></i>Altre info</button>
                 </div>
             </div>
             <div class="default-container">
@@ -133,6 +133,16 @@ h2 {
     font-size: 2.5rem;
 }
 .home-section {
-    margin-bottom: 80px;
+    margin-bottom: 60px;
+}
+.btn {
+    margin: 0 10px;
+}
+.btn > * {
+    margin: 0 10px;
+}
+.info {
+    background-color: grey;
+    color: #fff;
 }
 </style>

@@ -65,6 +65,9 @@ export default {
         font-size: .875rem;
         color:#fff
     }
+    & a:hover {
+        opacity: 0.6;
+    }
 }
 
 img {
