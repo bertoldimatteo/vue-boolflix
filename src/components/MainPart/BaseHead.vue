@@ -12,7 +12,6 @@
             </ul>
           </div>
           <div class="right-navbar">
-                <i class="icon fa-solid fa-magnifying-glass fa-lg"></i>
                 <SearchBar class="search-bar" @searching="dataShared.searchFilter"/>
           </div>
       </nav>
@@ -69,7 +68,6 @@ export default {
         opacity: 0.6;
     }
 }
-
 img {
     max-width: 120px;
     width: 100px;
