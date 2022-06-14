@@ -84,10 +84,11 @@ main {
     padding: 100px;
 }
 .default-container {
-    overflow-x: auto;
+    overflow-x: scroll;
     padding: 50px;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
+}
+.default-container::-webkit-scrollbar { 
+    width: 0 !important 
 }
 .default-container h3 {
     margin-bottom: 50px;
