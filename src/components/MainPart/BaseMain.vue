@@ -18,11 +18,21 @@
                 </div>
             </div>
             <div class="default-container">
-                <h3>I più popolari su Netflix</h3>
-                <div class="list-all">
-                    <ul class="popular">
-                        <CardVideo v-for="film in dataShared.popular" :key="film.id" :film="film"/>
-                    </ul>
+                <div class="home-section">
+                    <h3>I più popolari su Netflix</h3>
+                    <div class="list-all">
+                        <ul class="popular">
+                            <CardVideo v-for="film in dataShared.popular" :key="film.id" :film="film"/>
+                        </ul>
+                    </div>
+                </div>
+                <div class="home-section">
+                    <h3>Serie TV del momento</h3>
+                    <div class="list-all">
+                        <ul class="popular">
+                            <CardVideo v-for="film in dataShared.tvPopular" :key="film.id" :film="film"/>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,16 +62,25 @@ export default {
         CardVideo,
     },
     created() {
-    axios.get('https://api.themoviedb.org/3/trending/movie/week', {
-    params: {
-        api_key: '6f038455067a9f8d913bf429318fd950',
-  }
-    }).then((response) => {
-        this.dataShared.popular = response.data.results;
-    }).catch((error) => {
-        console.log(error);
-  })
-    }
+        axios.get('https://api.themoviedb.org/3/trending/movie/week', {
+        params: {
+            api_key: '6f038455067a9f8d913bf429318fd950',
+        }
+            }).then((response) => {
+                this.dataShared.popular = response.data.results;
+            }).catch((error) => {
+                console.log(error);
+        })
+        axios.get('https://api.themoviedb.org/3/tv/popular', {
+        params: {
+            api_key: '6f038455067a9f8d913bf429318fd950',
+        }
+            }).then((response) => {
+                this.dataShared.tvPopular = response.data.results;
+            }).catch((error) => {
+                console.log(error);
+        })
+        }
 }
 </script>
 
@@ -112,5 +131,8 @@ main {
 h2 {
     margin: 20px 0;
     font-size: 2.5rem;
+}
+.home-section {
+    margin-bottom: 80px;
 }
 </style>

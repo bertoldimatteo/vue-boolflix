@@ -6,6 +6,7 @@ export default Vue.observable ({
     films: [],
     tvSeries: [],
     popular: [],
+    tvPopular: [],
     flagAvailable: [
         'en',
         'it',
