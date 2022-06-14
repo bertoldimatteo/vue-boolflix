@@ -1,6 +1,7 @@
 <template>
   <li class="card_video">
-    <img class="posterFilm" :src="`https://image.tmdb.org/t/p/w500/${film.poster_path}`" alt="">
+    <img v-if="film.poster_path" class="posterFilm" :src="`https://image.tmdb.org/t/p/w342/${film.poster_path}`" alt="">
+    <img v-else src="http://www.asdalcione.it/wp-content/uploads/2016/08/jk-placeholder-image-1.jpg" alt="">
     <div class="film-info">
       <h3>{{film.title}}</h3>
       <h3>{{film.name}}</h3>
